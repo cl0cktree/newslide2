@@ -1,0 +1,49 @@
+<!DOCTYPE HTML5>
+<html>
+	<head>
+		<title>swipe-gallery</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" >
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css'>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/move.js"></script>
+	</head>
+
+	<body>
+		<section>
+			<article>
+				<div id="slide-wrap" class="slide-wrap">
+					<div id="slide-container" class="slide-container">
+						<div id="slide1" class="slide">
+							<img src="images/slide/banner1.png" alt="">
+						</div>
+						<div id="slide2" class="slide">
+							<img src="images/slide/banner2.png" alt="">
+						</div>
+						<div id="slide3" class="slide">
+							<img src="images/slide/banner3.png" alt="">
+						</div>
+						<div id="slide4" class="slide">
+							<img src="images/slide/banner2.png" alt="">
+						</div>
+						<div id="slide5" class="slide">
+							<img src="images/slide/banner1.png" alt="">
+						</div>
+						<div id="slide6" class="slide">
+							<img src="images/slide/banner2.png" alt="">
+						</div>
+					</div>
+					<div id="indicator" class="indicator">
+						
+					</div>
+					<div id="prev-btn" class="con-btn">
+					</div>
+					<div id="next-btn" class="con-btn">
+					</div>
+				</div>				
+			</article>
+		</section>
+	</body>
+</html>
