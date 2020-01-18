@@ -1,10 +1,10 @@
 [
-    {"img_url":"./images/slide/banner1.png","link_url":""},
-    {"img_url":"./images/slide/banner2.png","link_url":""},
-    {"img_url":"./images/slide/banner3.png","link_url":""},
-    {"img_url":"./images/slide/banner4.png","link_url":""},
-    {"img_url":"./images/slide/banner5.png","link_url":""},
-    {"img_url":"./images/slide/banner6.png","link_url":""},
-    {"img_url":"./images/slide/banner7.png","link_url":""},
-    {"img_url":"./images/slide/banner8.png","link_url":""}
+    {"img_url":"./images/slide/banner1.png","link_url":"","alt_text":"event "},
+    {"img_url":"./images/slide/banner2.png","link_url":"","alt_text":"event "},
+    {"img_url":"./images/slide/banner3.png","link_url":"","alt_text":"event "},
+    {"img_url":"./images/slide/banner4.png","link_url":"","alt_text":"event "},
+    {"img_url":"./images/slide/banner5.png","link_url":"","alt_text":"event "},
+    {"img_url":"./images/slide/banner6.png","link_url":"","alt_text":"event "},
+    {"img_url":"./images/slide/banner7.png","link_url":"","alt_text":"event "},
+    {"img_url":"./images/slide/banner8.png","link_url":"","alt_text":"event "}
 ]
