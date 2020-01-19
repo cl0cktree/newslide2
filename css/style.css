@@ -31,7 +31,7 @@ input[type=checkbox]:checked+label:before{content:"\2713";font-size:14px;font-we
 input[type=text]{box-sizing:border-box;}
 input[type=select]{appearance:none;-moz-appearance:none;-webkit-appearance:none;}
 
-section article{width:60%;background:red;margin:0 auto;}
+section article{width:60%;background:#fff;margin:0 auto;}
 section article .slide-wrap{width:100%;border:1px solid #000;}
 section article .slide-wrap .slide-container{width:100%;overflow:visible;display:block;}
 section article .slide-wrap .slide-container .slide{width:100%;position:absolute;z-index:1;top:0;display:block;box-sizing:border-box;margin:0;padding:0;}
