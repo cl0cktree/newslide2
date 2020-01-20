@@ -86,11 +86,9 @@ $(function(){
 					$('.bulet').css({'color':'#ccc'});
 					$('#bulet'+sort_index).css({'color':'#999'});
 					if(sort_index==mswidth){
-						console.log('last');
 						$('#prev-btn').css({'z-index':'2'});
 						$('#next-btn').css({'z-index':'-1'});
 					}else if(sort_index==1){
-						console.log('first');
 						$('#prev-btn').css({'z-index':'-1'});
 						$('#next-btn').css({'z-index':'2'});
 					}else{
@@ -123,11 +121,9 @@ $(function(){
 					sort_index--;
 					move=(sort_index-1)*-100;
 					if(sort_index==mswidth){
-						console.log('last');
 						$('#prev-btn').css({'z-index':'2'});
 						$('#next-btn').css({'z-index':'-1'});
 					}else if(sort_index==1){
-						console.log('first');
 						$('#prev-btn').css({'z-index':'-1'})
 						$('#next-btn').css({'z-index':'2'})
 					}else{
@@ -141,11 +137,9 @@ $(function(){
 					sort_index=mswidth;
 					move=(sort_index-1)*-100;
 					if(sort_index==mswidth){
-						console.log('last');
 						$('#prev-btn').css({'z-index':'2'});
 						$('#next-btn').css({'z-index':'-1'});
 					}else if(sort_index==1){
-						console.log('first');
 						$('#prev-btn').css({'z-index':'-1'})
 						$('#next-btn').css({'z-index':'2'})
 					}else{
@@ -291,7 +285,6 @@ $(function(){
 					dragmove = (tvalue/slideNum)*-100;
 					updown=move+dragmove;
 					// console.log(tvalue-cal_width);
-					$('#slide'+app_sort).remove('');
 					mswidth = $('.slide').each(Array).length;
 					stop_s();
 					stop_bar();
@@ -353,7 +346,6 @@ $(function(){
 							}
 						}
 					}
-					$('#slide'+app_sort).remove('');
 					start_s();
 					startbar();
 				}
@@ -374,7 +366,6 @@ $(function(){
 					dragmove = (tvalue/slideNum)*-100;
 					updown=move+dragmove;
 					// console.log(tvalue-cal_width);
-					$('#slide'+app_sort).remove('');
 					mswidth = $('.slide').each(Array).length;
 					stop_s();
 					stop_bar();
@@ -426,7 +417,6 @@ $(function(){
 							}
 						}
 					}
-					$('#slide'+app_sort).remove('');
 					start_s();
 					startbar();
 				}
@@ -452,13 +442,10 @@ $(function(){
 					setTimeout(stop_s,0);
 					sort_index = $(this).data('index');
 						move=(sort_index-1)*-100;
-						console.log('bullet_sort_index = '+sort_index);
 						if(sort_index==mswidth){
-							console.log('last');
 							$('#prev-btn').css({'z-index':'2'});
 							$('#next-btn').css({'z-index':'-1'});
 						}else if(sort_index==1){
-							console.log('first');
 							$('#prev-btn').css({'z-index':'-1'})
 							$('#next-btn').css({'z-index':'2'})
 						}else{
