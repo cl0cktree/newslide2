@@ -38,7 +38,7 @@ $(function(){
 					);
 					//// console.log('++');
 				};
-			}
+			};
 			if($('.slide-wrap').height()==0||$('.slide-wrap').height()==null){
 				setInterval(lazy_0,0);
 				//// console.log('==');
