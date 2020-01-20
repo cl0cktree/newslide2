@@ -46,9 +46,9 @@ $(function(){
 			//-----
 			function con_btn_hidden(){
 				if(parseInt($('.slide-wrap').css('width'))<480){
-					$('#prev-btn, #next-btn').css({'z-index':'-1'})
+					$('#prev-btn, #next-btn').css({'z-index':'-1','opacity':'0'})
 				}else{
-					$('#prev-btn, #next-btn').css({'z-index':'2'})
+					$('#prev-btn, #next-btn').css({'z-index':'2','opacity':'1'})
 				}
 			}
 			// setTimeout(con_btn_hidden,0);
@@ -74,8 +74,8 @@ $(function(){
 
 			//console.log(sort_index);
 			if(sort_index==1){
-				$('#prev-btn').css({'z-index':'-1'});
-				$('#next-btn').css({'z-index':'2'});
+				$('#prev-btn').css({'z-index':'-1','opacity':'0'});
+				$('#next-btn').css({'z-index':'2','opacity':'1'});
 			}
 			function nextBtn(){
 				// console.log('app_sort = '+app_sort);
@@ -86,27 +86,27 @@ $(function(){
 					$('.bulet').css({'color':'#ccc'});
 					$('#bulet'+sort_index).css({'color':'#999'});
 					if(sort_index==mswidth){
-						$('#prev-btn').css({'z-index':'2'});
-						$('#next-btn').css({'z-index':'-1'});
+						$('#prev-btn').css({'z-index':'2','opacity':'1'});
+						$('#next-btn').css({'z-index':'-1','opacity':'0'});
 					}else if(sort_index==1){
-						$('#prev-btn').css({'z-index':'-1'});
-						$('#next-btn').css({'z-index':'2'});
+						$('#prev-btn').css({'z-index':'-1','opacity':'0'});
+						$('#next-btn').css({'z-index':'2','opacity':'1'});
 					}else{
-						$('#prev-btn').css({'z-index':'2'});
-						$('#next-btn').css({'z-index':'2'});
+						$('#prev-btn').css({'z-index':'2','opacity':'1'});
+						$('#next-btn').css({'z-index':'2','opacity':'1'});
 					}
 				}else{
 					sort_index=1;
 					move=(sort_index-1)*-100;
 					if(sort_index==mswidth){
-						$('#prev-btn').css({'z-index':'2'});
-						$('#next-btn').css({'z-index':'-1'});
+						$('#prev-btn').css({'z-index':'2','opacity':'1'});
+						$('#next-btn').css({'z-index':'-1','opacity':'0'});
 					}else if(sort_index==1){
-						$('#prev-btn').css({'z-index':'-1'})
-						$('#next-btn').css({'z-index':'2'})
+						$('#prev-btn').css({'z-index':'-1','opacity':'0'})
+						$('#next-btn').css({'z-index':'2','opacity':'1'})
 					}else{
-						$('#prev-btn').css({'z-index':'2'});
-						$('#next-btn').css({'z-index':'2'});
+						$('#prev-btn').css({'z-index':'2','opacity':'1'});
+						$('#next-btn').css({'z-index':'2','opacity':'1'});
 					}
 					$('.slide-container').stop().animate({'left':move+'%'},100);
 					$('.bulet').css({'color':'#ccc'});
@@ -121,14 +121,14 @@ $(function(){
 					sort_index--;
 					move=(sort_index-1)*-100;
 					if(sort_index==mswidth){
-						$('#prev-btn').css({'z-index':'2'});
-						$('#next-btn').css({'z-index':'-1'});
+						$('#prev-btn').css({'z-index':'2','opacity':'1'});
+						$('#next-btn').css({'z-index':'-1','opacity':'0'});
 					}else if(sort_index==1){
-						$('#prev-btn').css({'z-index':'-1'})
-						$('#next-btn').css({'z-index':'2'})
+						$('#prev-btn').css({'z-index':'-1','opacity':'0'})
+						$('#next-btn').css({'z-index':'2','opacity':'1'})
 					}else{
-						$('#prev-btn').css({'z-index':'2'});
-						$('#next-btn').css({'z-index':'2'});
+						$('#prev-btn').css({'z-index':'2','opacity':'1'});
+						$('#next-btn').css({'z-index':'2','opacity':'1'});
 					}
 					$('.slide-container').stop().animate({'left':move+'%'},100);
 					$('.bulet').css({'color':'#ccc'});
@@ -137,14 +137,14 @@ $(function(){
 					sort_index=mswidth;
 					move=(sort_index-1)*-100;
 					if(sort_index==mswidth){
-						$('#prev-btn').css({'z-index':'2'});
-						$('#next-btn').css({'z-index':'-1'});
+						$('#prev-btn').css({'z-index':'2','opacity':'1'});
+						$('#next-btn').css({'z-index':'-1','opacity':'0'});
 					}else if(sort_index==1){
-						$('#prev-btn').css({'z-index':'-1'})
-						$('#next-btn').css({'z-index':'2'})
+						$('#prev-btn').css({'z-index':'-1','opacity':'0'})
+						$('#next-btn').css({'z-index':'2','opacity':'1'})
 					}else{
-						$('#prev-btn').css({'z-index':'2'});
-						$('#next-btn').css({'z-index':'2'});
+						$('#prev-btn').css({'z-index':'2','opacity':'1'});
+						$('#next-btn').css({'z-index':'2','opacity':'1'});
 					}
 					$('.slide-container').stop().animate({'left':move+'%'},100);
 					$('.bulet').css({'color':'#ccc'});
@@ -443,14 +443,14 @@ $(function(){
 					sort_index = $(this).data('index');
 						move=(sort_index-1)*-100;
 						if(sort_index==mswidth){
-							$('#prev-btn').css({'z-index':'2'});
-							$('#next-btn').css({'z-index':'-1'});
+							$('#prev-btn').css({'z-index':'2','opacity':'1'});
+							$('#next-btn').css({'z-index':'-1','opacity':'0'});
 						}else if(sort_index==1){
-							$('#prev-btn').css({'z-index':'-1'})
-							$('#next-btn').css({'z-index':'2'})
+							$('#prev-btn').css({'z-index':'-1','opacity':'0'})
+							$('#next-btn').css({'z-index':'2','opacity':'1'})
 						}else{
-							$('#prev-btn').css({'z-index':'2'});
-							$('#next-btn').css({'z-index':'2'});
+							$('#prev-btn').css({'z-index':'2','opacity':'1'});
+							$('#next-btn').css({'z-index':'2','opacity':'1'});
 						}
 						$('.bulet').css({'color':'#ccc'});
 						$('#bulet'+sort_index).css({'color':'#999'});
