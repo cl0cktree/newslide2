@@ -46,10 +46,8 @@ $(function(){
 			//-----
 			function con_btn_hidden(){
 				if(parseInt($('.slide-wrap').css('width'))<480){
-					// console.log('under 640 = '+parseInt($('.slide').css('width')));
 					$('#prev-btn, #next-btn').css({'z-index':'-1'})
 				}else{
-					// console.log('up 640'+parseInt($('.slide').css('width')));
 					$('#prev-btn, #next-btn').css({'z-index':'2'})
 				}
 			}
@@ -103,11 +101,9 @@ $(function(){
 					sort_index=1;
 					move=(sort_index-1)*-100;
 					if(sort_index==mswidth){
-						console.log('last');
 						$('#prev-btn').css({'z-index':'2'});
 						$('#next-btn').css({'z-index':'-1'});
 					}else if(sort_index==1){
-						console.log('first');
 						$('#prev-btn').css({'z-index':'-1'})
 						$('#next-btn').css({'z-index':'2'})
 					}else{
