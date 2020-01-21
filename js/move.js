@@ -74,6 +74,7 @@ $(function(){
 
 			//console.log(sort_index);
 			page();
+			controll();
 			if(sort_index==1){
 				$('#prev-btn').css({'z-index':'-1','opacity':'0'});
 				$('#next-btn').css({'z-index':'2','opacity':'1'});
@@ -114,6 +115,7 @@ $(function(){
 					$('#bulet'+sort_index).css({'color':'#999'});
 				}
 				page();
+				inner_controll();
 				//sort_all = parseInt($('.slide').data('index'));
 			};
 
@@ -153,6 +155,7 @@ $(function(){
 					$('#bulet'+sort_index).css({'color':'#999'});
 				}
 				page();
+				inner_controll();
 			};
 
 			function stop_next(){
@@ -177,6 +180,7 @@ $(function(){
 				{
 					start_s();
 					startbar();
+					inner_controll();
 				}
 				else if (event.type='click')
 				{
@@ -206,6 +210,7 @@ $(function(){
 				{
 					start_s();
 					startbar();
+					inner_controll();
 				}
 				else if (event.type='click')
 				{
@@ -434,6 +439,7 @@ $(function(){
 				{
 					start_s();
 					startbar();
+					inner_controll();
 				}
 				return false;
 			});
@@ -459,6 +465,7 @@ $(function(){
 						$('#bulet'+sort_index).css({'color':'#999'});
 						$('.slide-container').stop().animate({'left':move+'%'},100);
 						page();
+						inner_controll();
 					setTimeout(startbar,0);
 					setTimeout(start_s,0);
 				}
@@ -470,6 +477,7 @@ $(function(){
 				{
 					start_s();
 					startbar();
+					inner_controll();
 				}
 			});
 
@@ -500,6 +508,34 @@ $(function(){
 				else{
 					$('.pagecount').children('span').text(sort_index+' / '+slideNum);
 				}
+			};
+			function controll(){
+				var controll_right;
+				if($('.slide-wrap').find('.pagecount')){
+					controll_right=60;
+				}else{
+					controll_right=0;
+				}
+				if($('.slide-wrap').find('.controll').length<1){
+					$('.slide-wrap').append('<div class="controll" style="position:absolute;right:0;right:'+controll_right+'px;width:60px;height:30px;line-height:30px;background:rgba(0,0,0,0.7);color:#fff;font-size:14px;z-index:4;">\
+					<input type="checkbox" id="controll_btn" name="controll_btn"><label for="controll_btn"><span class="btn_word" style="display:block;width:100%;text-align:center;cursor:pointer;">Stop</span></label></div>')
+				}
+				$('.controll input[type=checkbox]').click(function(){
+					if ($(this).prop('checked')==true)
+					{
+						$('.controll label').children('span').text('Play');
+						stop_s();
+						stop_bar();
+					}else{
+						$('.controll label').children('span').text('Stop');
+						start_s();
+						startbar();
+					}
+				});
+			}
+			function inner_controll(){
+				$('.controll input[type=checkbox]').prop('checked',false);
+				$('.controll label').children('span').text('Stop');
 			};
 			function start_s(){
 				setTimeout(lazy_0,0);
