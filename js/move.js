@@ -441,6 +441,25 @@ $(function(){
 					startbar();
 					inner_controll();
 				}
+				else if(event.type=='click'){
+					if($(this).is('#slide1')==true){
+						$('body').css({'background':'red'})
+					}else if($(this).is('#slide2')==true){
+						$('body').css({'background':'orange'})
+					}else if($(this).is('#slide3')==true){
+						$('body').css({'background':'yellow'})
+					}else if($(this).is('#slide4')==true){
+						$('body').css({'background':'green'})
+					}else if($(this).is('#slide5')==true){
+						$('body').css({'background':'blue'})
+					}else if($(this).is('#slide6')==true){
+						$('body').css({'background':'purple'})
+					}else if($(this).is('#slide7')==true){
+						$('body').css({'background':'gray'})
+					}else if($(this).is('#slide8')==true){
+						$('body').css({'background':'black'})
+					}
+				};
 				return false;
 			});
 
