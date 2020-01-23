@@ -400,23 +400,7 @@ $(function(){
 						}
 					}else if(tvalue==0){
 						if(yvalue==0){
-							if($(this).is('#slide1')==true){
-								$('body').css({'background':'red'})
-							}else if($(this).is('#slide2')==true){
-								$('body').css({'background':'orange'})
-							}else if($(this).is('#slide3')==true){
-								$('body').css({'background':'yellow'})
-							}else if($(this).is('#slide4')==true){
-								$('body').css({'background':'green'})
-							}else if($(this).is('#slide5')==true){
-								$('body').css({'background':'blue'})
-							}else if($(this).is('#slide6')==true){
-								$('body').css({'background':'purple'})
-							}else if($(this).is('#slide7')==true){
-								$('body').css({'background':'gray'})
-							}else if($(this).is('#slide8')==true){
-								$('body').css({'background':'black'})
-							}
+							click_move();
 						}else{
 							if(yvalue>cal_height){
 								$('body, html').stop().animate({ scrollTop: $("body").offset().top+yvalue },300);
@@ -445,23 +429,7 @@ $(function(){
 					inner_controll_s();
 				}
 				else if(event.type=='click'){
-					if($(this).is('#slide1')==true){
-						$('body').css({'background':'red'})
-					}else if($(this).is('#slide2')==true){
-						$('body').css({'background':'orange'})
-					}else if($(this).is('#slide3')==true){
-						$('body').css({'background':'yellow'})
-					}else if($(this).is('#slide4')==true){
-						$('body').css({'background':'green'})
-					}else if($(this).is('#slide5')==true){
-						$('body').css({'background':'blue'})
-					}else if($(this).is('#slide6')==true){
-						$('body').css({'background':'purple'})
-					}else if($(this).is('#slide7')==true){
-						$('body').css({'background':'gray'})
-					}else if($(this).is('#slide8')==true){
-						$('body').css({'background':'black'})
-					}
+					click_move();
 				};
 				return false;
 			});
@@ -563,6 +531,25 @@ $(function(){
 			function inner_controll_p(){
 				$('.controll input[type=checkbox]').prop('checked',true);
 				$('.controll label').children('span').text('Play');
+			};
+			function click_move(){
+				if(sort_index==1){
+					$('body').css({'background':'red'})
+				}else if(sort_index==2){
+					$('body').css({'background':'orange'})
+				}else if(sort_index==3){
+					$('body').css({'background':'yellow'})
+				}else if(sort_index==4){
+					$('body').css({'background':'green'})
+				}else if(sort_index==5){
+					$('body').css({'background':'blue'})
+				}else if(sort_index==6){
+					$('body').css({'background':'purple'})
+				}else if(sort_index==7){
+					$('body').css({'background':'gray'})
+				}else if(sort_index==8){
+					$('body').css({'background':'black'})
+				}
 			};
 			function start_s(){
 				setTimeout(lazy_0,0);
