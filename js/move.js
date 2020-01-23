@@ -500,6 +500,12 @@ $(function(){
 					$('.pagecount').children('span').text(sort_index+' / '+slideNum);
 				}
 			};
+			function click_snd(){
+				var clickSnd = new Audio();
+				clickSnd.src = "media/t_btn_click.mp3";
+				clickSnd.load();
+				clickSnd.play();
+			};
 			function controll(){
 				var controll_right;
 				if($('.slide-wrap').find('.pagecount')){
@@ -522,8 +528,9 @@ $(function(){
 						start_s();
 						startbar();
 					}
+					click_snd();
 				});
-			}
+			};
 			function inner_controll_s(){
 				$('.controll input[type=checkbox]').prop('checked',false);
 				$('.controll label').children('span').text('Stop');
