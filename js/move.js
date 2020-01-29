@@ -50,16 +50,24 @@ $(function(){
 			var barspeed = autospeed-200;
 			var movespeed = 100;
 			var boundspeed = 100;
+			var framespeed = 1000/60;
 			class_slide = document.getElementsByClassName('slide');
 			sort_index = $('.slide, .bulet').data('index');
 			app_sort = mswidth+1;
 
 			$(window).resize(function(){
-				msheight = $('.slide img').height();
-				var mswidth = $('.slide').each(Array).length;/*-슬라이드 전체 배열의 갯수만큼의 숫자를 추출-*/
-				wrapwidth = mswidth*100;
-				s_width = $('.slide').width();
-				$('.slide-wrap').css({'height':msheight});
+				var delay_time;
+				if(!delay_time){
+					delay_time = setTimeout(function() {
+						delay_time=null;
+						msheight = $('.slide img').height();
+						var mswidth = $('.slide').each(Array).length;/*-슬라이드 전체 배열의 갯수만큼의 숫자를 추출-*/
+						wrapwidth = mswidth*100;
+						s_width = $('.slide').width();
+						$('.slide-wrap').css({'height':msheight});
+						console.log(framespeed);
+					},framespeed);
+				}
 			});
 
 			//console.log(sort_index);
