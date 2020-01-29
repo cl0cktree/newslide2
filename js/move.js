@@ -33,25 +33,14 @@ $(function(){
 					$(document).ready(function(){
 							msheight = $('.slide').children('img').height();
 							$('.slide-wrap').css({'height':msheight});
-							//// console.log(msheight+' --');
 						}
 					);
-					//// console.log('++');
 				};
 			};
 			if($('.slide-wrap').height()==0||$('.slide-wrap').height()==null){
 				setInterval(lazy_0,0);
-				//// console.log('==');
 			};
 			//-----
-			function con_btn_hidden(){
-				if(parseInt($('.slide-wrap').css('width'))<480){
-					$('#prev-btn, #next-btn').css({'z-index':'-1','opacity':'0'})
-				}else{
-					$('#prev-btn, #next-btn').css({'z-index':'2','opacity':'1'})
-				}
-			}
-			// setTimeout(con_btn_hidden,0);
 			mswidth = $('.slide').each(Array).length;/*슬라이드 전체 배열의 갯수만큼의 숫자를 추출*/
 			s_width = $('.slide').width();
 			msheight = $('.slide img').height();
@@ -71,7 +60,6 @@ $(function(){
 				wrapwidth = mswidth*100;
 				s_width = $('.slide').width();
 				$('.slide-wrap').css({'height':msheight});
-				//con_btn_hidden();
 			});
 
 			//console.log(sort_index);
