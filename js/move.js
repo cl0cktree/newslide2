@@ -57,8 +57,10 @@ $(function(){
 			msheight = $('.slide img').height();
 			var sort_all;
 			var move;
-			var autospeed=2000;
+			var autospeed = 2000;
 			var barspeed = autospeed-200;
+			var movespeed = 100;
+			var boundspeed = 100;
 			class_slide = document.getElementsByClassName('slide');
 			sort_index = $('.slide, .bulet').data('index');
 			app_sort = mswidth+1;
@@ -84,7 +86,7 @@ $(function(){
 				if(sort_index<mswidth){
 					sort_index++;
 					move=(sort_index-1)*-100;
-					$('.slide-container').stop().animate({'left':move+'%'},100);
+					$('.slide-container').stop().animate({'left':move+'%','transition-timing-function':'linear'},movespeed);
 					$('.bulet').css({'color':'#ccc'});
 					$('#bulet'+sort_index).css({'color':'#999'});
 					if(sort_index==mswidth){
@@ -110,7 +112,7 @@ $(function(){
 						$('#prev-btn').css({'z-index':'2','opacity':'1'});
 						$('#next-btn').css({'z-index':'2','opacity':'1'});
 					}
-					$('.slide-container').stop().animate({'left':move+'%'},100);
+					$('.slide-container').stop().animate({'left':move+'%','transition-timing-function':'linear'},movespeed);
 					$('.bulet').css({'color':'#ccc'});
 					$('#bulet'+sort_index).css({'color':'#999'});
 				}
@@ -134,7 +136,7 @@ $(function(){
 						$('#prev-btn').css({'z-index':'2','opacity':'1'});
 						$('#next-btn').css({'z-index':'2','opacity':'1'});
 					}
-					$('.slide-container').stop().animate({'left':move+'%'},100);
+					$('.slide-container').stop().animate({'left':move+'%','transition-timing-function':'linear'},movespeed);
 					$('.bulet').css({'color':'#ccc'});
 					$('#bulet'+sort_index).css({'color':'#999'});
 				}else{
@@ -150,7 +152,7 @@ $(function(){
 						$('#prev-btn').css({'z-index':'2','opacity':'1'});
 						$('#next-btn').css({'z-index':'2','opacity':'1'});
 					}
-					$('.slide-container').stop().animate({'left':move+'%'},100);
+					$('.slide-container').stop().animate({'left':move+'%','transition-timing-function':'linear'},movespeed);
 					$('.bulet').css({'color':'#ccc'});
 					$('#bulet'+sort_index).css({'color':'#999'});
 				}
@@ -302,7 +304,7 @@ $(function(){
 					if (tvalue>cal_width){
 						if(sort_index==mswidth){
 							if(updown!==drag_return){
-								$('.slide-container').stop().animate({'left':drag_return+'%'},100);
+								$('.slide-container').stop().animate({'left':drag_return+'%'},boundspeed);
 							}
 						}else{
 							$('#next-btn').stop().click();
@@ -310,7 +312,7 @@ $(function(){
 					}else if(tvalue<-cal_width){
 						if(sort_index==1){
 							if(updown!==drag_return){
-								$('.slide-container').stop().animate({'left':drag_return+'%'},100);
+								$('.slide-container').stop().animate({'left':drag_return+'%'},boundspeed);
 							}
 						}else{
 							stop_next();
@@ -321,11 +323,11 @@ $(function(){
 						if(updown!==drag_return){
 							// console.log('app_sort = '+app_sort);
 							// console.log('dragmove = '+dragmove+' / move = '+move+' / drag_return'+drag_return);
-							$('.slide-container').stop().animate({'left':drag_return+'%'},100);
+							$('.slide-container').stop().animate({'left':drag_return+'%'},boundspeed);
 						}
 					}else if(tvalue>-cal_width&&tvalue<0){
 						if(updown!==drag_return){
-							$('.slide-container').stop().animate({'left':drag_return+'%'},100);
+							$('.slide-container').stop().animate({'left':drag_return+'%'},boundspeed);
 						}
 					}else if(tvalue==0){
 						if(yvalue==0){
@@ -392,11 +394,11 @@ $(function(){
 						if(updown!==drag_return){
 							// console.log('app_sort = '+app_sort);
 							// console.log('dragmove = '+dragmove+' / move = '+move+' / drag_return'+drag_return);
-							$('.slide-container').stop().animate({'left':drag_return+'%'},100);
+							$('.slide-container').stop().animate({'left':drag_return+'%'},boundspeed);
 						}
 					}else if(tvalue>-cal_width&&tvalue<0){
 						if(updown!==drag_return){
-							$('.slide-container').stop().animate({'left':drag_return+'%'},100);
+							$('.slide-container').stop().animate({'left':drag_return+'%'},boundspeed);
 						}
 					}else if(tvalue==0){
 						if(yvalue==0){
@@ -453,7 +455,7 @@ $(function(){
 						}
 						$('.bulet').css({'color':'#ccc'});
 						$('#bulet'+sort_index).css({'color':'#999'});
-						$('.slide-container').stop().animate({'left':move+'%'},100);
+						$('.slide-container').stop().animate({'left':move+'%'},movespeed);
 						page();
 						// inner_controll_s();
 					setTimeout(startbar,0);
