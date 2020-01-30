@@ -65,7 +65,6 @@ $(function(){
 						wrapwidth = mswidth*100;
 						s_width = $('.slide').width();
 						$('.slide-wrap').css({'height':msheight});
-						console.log(framespeed);
 					},framespeed);
 				}
 			});
