@@ -326,23 +326,7 @@ $(function(){
 						}
 					}else if(tvalue==0){
 						if(yvalue==0){
-							if($(this).is('#slide1')==true){
-								$('body').css({'background':'red'})
-							}else if($(this).is('#slide2')==true){
-								$('body').css({'background':'orange'})
-							}else if($(this).is('#slide3')==true){
-								$('body').css({'background':'yellow'})
-							}else if($(this).is('#slide4')==true){
-								$('body').css({'background':'green'})
-							}else if($(this).is('#slide5')==true){
-								$('body').css({'background':'blue'})
-							}else if($(this).is('#slide6')==true){
-								$('body').css({'background':'purple'})
-							}else if($(this).is('#slide7')==true){
-								$('body').css({'background':'gray'})
-							}else if($(this).is('#slide8')==true){
-								$('body').css({'background':'black'})
-							}
+							click_move();
 						}else{
 							if(yvalue>cal_height){
 								$('body, html').stop().animate({ scrollTop: $("body").offset().top+yvalue },300);
@@ -503,7 +487,7 @@ $(function(){
 			};
 			function page(){
 				if($('.slide-wrap').find('.pagecount').length<1){
-					$('.slide-wrap').append('<div class="pagecount" style="position:absolute;right:0;right:0;width:60px;height:30px;line-height:30px;background:rgba(0,0,0,0.7);color:#fff;font-size:14px;z-index:4;"><span style="display:block;width:100%;text-align:center;">'+sort_index+' / '+slideNum+'</span></div>')
+					$('.slide-wrap').append('<div class="pagecount" style="position:absolute;top:0;right:0;width:60px;height:30px;line-height:30px;background:rgba(0,0,0,0.7);color:#fff;font-size:14px;z-index:4;"><span style="display:block;width:100%;text-align:center;">'+sort_index+' / '+slideNum+'</span></div>')
 				}
 				else{
 					$('.pagecount').children('span').text(sort_index+' / '+slideNum);
@@ -523,7 +507,7 @@ $(function(){
 					controll_right=0;
 				}
 				if($('.slide-wrap').find('.controll').length<1){
-					$('.slide-wrap').append('<div class="controll" style="position:absolute;right:0;right:'+controll_right+'px;width:60px;height:30px;line-height:30px;background:rgba(0,0,0,0.7);color:#fff;font-size:14px;z-index:4;">\
+					$('.slide-wrap').append('<div class="controll" style="position:absolute;top:0;right:'+controll_right+'px;width:60px;height:30px;line-height:30px;background:rgba(0,0,0,0.7);color:#fff;font-size:14px;z-index:4;">\
 					<input type="checkbox" id="controll_btn" name="controll_btn"><label for="controll_btn"><span class="btn_word" style="display:block;width:100%;text-align:center;cursor:pointer;">Stop</span></label></div>')
 				}
 				$('.controll input[type=checkbox]').click(function(){
