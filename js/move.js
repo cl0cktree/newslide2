@@ -523,7 +523,7 @@ $(function(){
 			function bullet_on(){
 				$('.bulet').css({'color':'#ccc'});
 				$('#bulet'+sort_index).css({'color':'#999'});
-			}
+			};
 			function thumnail_on(){
 				$('.thumnail').children('img').css({'border':'2px solid transparent'});
 				$('#thumnail'+sort_index).children('img').css({'border':'2px solid #000'});
