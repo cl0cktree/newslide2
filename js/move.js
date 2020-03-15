@@ -444,7 +444,7 @@ $(function(){
 					setTimeout(startbar,0);
 					setTimeout(start_s,0);
 				}
-				if (event.type=='mouseover')
+				else if (event.type=='mouseover')
 				{
 					stop_s();
 					stop_bar();
@@ -457,27 +457,43 @@ $(function(){
 				}
 			});
 
-			$('.thumnail').on('click', function(){
-				setTimeout(stop_bar,0);
-				setTimeout(stop_s,0);
-				sort_index = $(this).data('index');
-				move=(sort_index-1)*-100;
-				if(sort_index==mswidth){
-					$('#prev-btn').css({'z-index':'2','opacity':'1'});
-					$('#next-btn').css({'z-index':'-1','opacity':'0'});
-				}else if(sort_index==1){
-					$('#prev-btn').css({'z-index':'-1','opacity':'0'})
-					$('#next-btn').css({'z-index':'2','opacity':'1'})
-				}else{
-					$('#prev-btn').css({'z-index':'2','opacity':'1'});
-					$('#next-btn').css({'z-index':'2','opacity':'1'});
+			$('.thumnail').on('click mouseover mouseout', function(){
+				if (event.type=='click')
+				{
+					setTimeout(stop_bar,0);
+					setTimeout(stop_s,0);
+					sort_index = $(this).data('index');
+					move=(sort_index-1)*-100;
+					if(sort_index==mswidth){
+						$('#prev-btn').css({'z-index':'2','opacity':'1'});
+						$('#next-btn').css({'z-index':'-1','opacity':'0'});
+					}else if(sort_index==1){
+						$('#prev-btn').css({'z-index':'-1','opacity':'0'})
+						$('#next-btn').css({'z-index':'2','opacity':'1'})
+					}else{
+						$('#prev-btn').css({'z-index':'2','opacity':'1'});
+						$('#next-btn').css({'z-index':'2','opacity':'1'});
+					}
+					thumnail_on();
+					bullet_on();
+					page();
+					$('.slide-container').stop().animate({'left':move+'%'},movespeed);
+					setTimeout(startbar,0);
+					setTimeout(start_s,0);
 				}
-				thumnail_on();
-				bullet_on();
-				page();
-				$('.slide-container').stop().animate({'left':move+'%'},movespeed);
-				setTimeout(startbar,0);
-				setTimeout(start_s,0);
+				else if (event.type=='mouseover')
+				{
+					stop_s();
+					stop_bar();
+					// inner_controll_p();
+				}else if (event.type=='mouseout')
+				{
+					stop_s();
+					stop_bar();
+					start_s();
+					startbar();
+					// inner_controll_s();
+				}
 			});
 
 			function lazy_0(){
