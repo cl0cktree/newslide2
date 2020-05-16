@@ -184,7 +184,7 @@ $(function(){
 					startbar();
 					// inner_controll_s();
 				}
-				else if (event.type='click')
+				else if (event.type=='click')
 				{
 					// event.preventDefault();
 					// event.stopPropagation();
