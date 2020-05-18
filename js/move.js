@@ -414,7 +414,13 @@ $(function(){
 					// inner_controll_s();
 				}
 				else if(event.type=='click'){
+					event.preventDefault();
+					event.stopPropagation();
+					setTimeout(stop_s,0);
+					setTimeout(stop_bar,0);
 					click_move();
+					start_s();
+					startbar();
 				};
 				return false;
 			});
